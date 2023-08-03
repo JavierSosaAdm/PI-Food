@@ -23,6 +23,7 @@ module.exports = (sequelize) => {
 
     ResumenDelPlato: {
       type: DataTypes.TEXT, //
+      allowNull: false,
     },
 
     PasoApaso: {
@@ -31,9 +32,9 @@ module.exports = (sequelize) => {
       unique:true,
     },
 
-    healthScore: {
-      type: DataTypes.STRING, //
-    },
+    created: {
+      type: DataTypes.BOOLEAN,
+    }
     
   },
   {timestamps: false}, // para no mostrar hora y fecha de creación
